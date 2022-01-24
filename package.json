@@ -1,0 +1,19 @@
+{
+  "name": "warehouse-inventory",
+  "version": "1.0.0",
+  "description": "### Wireframes  ![map](README_images/relationship_map.png) ![map](README_images/itemPage.jpeg) ![map](README_images/homePage.jpeg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rz4life/Warehouse-inventory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rz4life/Warehouse-inventory/issues"
+  },
+  "homepage": "https://github.com/rz4life/Warehouse-inventory#readme"
+}

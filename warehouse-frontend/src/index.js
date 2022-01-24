@@ -17,7 +17,6 @@ let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    {/* <Provider > */}
     <App />
     </Provider>
   </React.StrictMode>,
