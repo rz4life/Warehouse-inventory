@@ -7,8 +7,8 @@ const db = require("./db")
 
 
 async function seed(){
-    await db.sync();
     await initialiseDb()
+    await db.sync({force: true});
 
     const seedPath = path.join(__dirname,'item.json')
     const buffer = await fs.readFile(seedPath)
