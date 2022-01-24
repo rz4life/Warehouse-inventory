@@ -1,20 +1,14 @@
 const express = require("express");
-const initialiseDb = require('./initialiseDb');
+const seed = require("./index")
 const Item = require('./models/item');
 const User = require('./models/user')
+
+
+
 const app = express();
 const port = 3001;
 
 
-async function seed(){
-    await initialiseDb()
-    let comb = Item.create({name: "comb",description: "brown"})
-}
-
-seed()
-app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
-});
 
 app.get('/items', async (req, res) => {
     const items = await Item.findAll();
@@ -35,3 +29,9 @@ app.get('/users/:id', async (req, res) => {
     const user = await User.findByPk(req.params.id)
     res.json({user})
 })
+
+app.listen(port, async() => {
+        
+        await seed()
+        console.log(`Server listening at http://localhost:${port}`);
+});
