@@ -5,9 +5,16 @@ const User = require('./models/user')
 const app = express();
 const port = 3001;
 
+const cors = require('cors')
+
+app.use(cors())
+
 
 async function seed(){
+
+
     await initialiseDb()
+
     let comb = Item.create({name: "comb",description: "brown"})
 }
 
