@@ -8,6 +8,9 @@ const User = require('./models/user')
 const app = express();
 const port = 3001;
 
+const cors = require('cors')
+
+app.use(cors())
 
 
 app.get('/items', async (req, res) => {
