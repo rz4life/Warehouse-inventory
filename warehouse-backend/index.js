@@ -3,9 +3,11 @@ const User = require ('./models/user')
 const Item = require ('./models/item')
 const path = require('path')
 const fs = require('fs').promises
+const db = require("./db")
 
 
 async function seed(){
+    await db.sync();
     await initialiseDb()
 
     const seedPath = path.join(__dirname,'item.json')
