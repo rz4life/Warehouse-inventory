@@ -6,7 +6,6 @@ const db = require('./db')
 async function initialiseDb(){
     // User.hasMany(Item);
     Item.belongsTo(User);
-    await db.sync();
 }
 
 module.exports = initialiseDb
