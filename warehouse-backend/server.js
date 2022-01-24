@@ -1,16 +1,17 @@
 const express = require("express");
-const initialiseDb = require('./initialiseDb');
+const seed = require("./index")
+
+
 
 const app = express();
 const port = 3001;
 
 
-async function seed(){
-    await initialiseDb()
 
-}
 
-seed()
-app.listen(port, () => {
+
+app.listen(port, async() => {
+    
+    await seed()
     console.log(`Server listening at http://localhost:${port}`);
 });
