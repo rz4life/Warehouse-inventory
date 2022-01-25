@@ -1,4 +1,4 @@
-import { Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <Route exact path="/medications/new" component={NewMedicationForm} />
+     
     </div>
   );
 };
