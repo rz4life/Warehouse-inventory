@@ -9,11 +9,15 @@ class Items extends Component {
   }
 
   render() {
-    console.log(this.props);
+    
     const items = this.props.items.map((item, i) => {
-      console.log(item, i);
-      console.log(this);
-      return <Item key={i} item={item} />;
+      <Item key={i} item={item} />;
+      <>
+      <h1>name:{item.name}</h1>
+      <h1>price: {item.price}</h1>
+      {/* <h1>description:{item.description}</h1> */}
+      <img src={item.image}/>
+      </>
     });
 
     return (

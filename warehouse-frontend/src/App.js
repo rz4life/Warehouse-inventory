@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <h3>Hello from react front end app page</h3>
+        <Navbar />
         <Routes>
         <Route exact path="/items" element={<Items/>}/>
         </Routes>
