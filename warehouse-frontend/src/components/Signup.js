@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
-
+import ".//Signup.css";
 function Signup(props) {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -32,6 +32,7 @@ function Signup(props) {
     return (
         <div className='signuppage'>
             <div className='signup'>
+                <div class='signup-container'>
 
                 <form onSubmit={submitform}>
                     
@@ -63,10 +64,11 @@ function Signup(props) {
                     </div>
 
                     <div className='input'>
-                        <input type='submit' value='Signup!' />
+                       <button type='submit' value='Signup!'>Signup!</button>
                     </div>
 
                 </form>
+                </div>
             </div>
         </div>
     )
