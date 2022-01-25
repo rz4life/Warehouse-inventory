@@ -12,21 +12,21 @@ function App() {
   return (
 
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-        <Route exact path="/items" element={<Items setItems={setItems}/>}/>
-        <Route path="/items/:id" element={<Item item={item}/>}/>
-        </Routes>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route exact path="/items" element={ <Items setItems={setItems}/>}/>
 
-        <Routes>
-        <Route exact path="/login" element={<Login setUser={setUser} />}/>
-        </Routes>
+            <Route path="/items/:id" element={<Item item={item}/>}/>
+          </Routes>
 
-        <Routes>
-        <Route exact path="/signup" element={<Signup setUser={setUser} />}/>
-        </Routes>
+          <Routes>
+              <Route exact path="/login" element={ < Login setUser={setUser} />}/>
+          </Routes>
 
+          <Routes>
+          <Route exact path="/signup" element={ <Signup setUser={setUser} />}/>
+          </Routes>
        </Router>
     </div>
   );
