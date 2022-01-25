@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
-
+import ".//Login.css";
 function Login(props) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("")
@@ -25,6 +25,7 @@ function Login(props) {
     return(
     <div className = 'loginpage'>
         <div className = 'login'>
+                <div class = 'login-container'>
 
                 <form onSubmit = {submitform}>
                     <h3>Login to your Account</h3>
@@ -39,10 +40,12 @@ function Login(props) {
                     </div>
 
                     <div className = 'input'>
-                        <input type = 'submit' value = 'Login!'/>
+                       
+                        <button type = 'submit' value = 'Login!'>Login</button>
                     </div>
 
                 </form>
+                </div>
         </div>
     </div>
 )
