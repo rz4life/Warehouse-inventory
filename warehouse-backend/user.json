@@ -1,0 +1,10 @@
+{
+    "userdata": 
+     [
+    {"firstName": "andres", "lastName":"nunez", "email":"andres@gmail.com","password":"password1","profilepicture":"profile","manager":true},
+    {"firstName": "rz", "lastName":"alagbada", "email":"rz@gmail.com","password":"password2","profilepicture":"profile","manager":true},
+    {"firstName": "jin", "lastName":"jin", "email":"jin@gmail.com","password":"password3","profilepicture":"profile","manager":false},
+    {"firstName": "diana", "lastName":"rene", "email":"diana@gmail.com","password":"password","profilepicture":"profile","manager":false}
+    ]
+
+}
