@@ -4,7 +4,7 @@ import Items from './containers/Items';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Item from './components/Item';
-
+import Signup from "./components/Signup";
 import Login from './components/Login';
 function App() {
   const [user, setUser] = useState(null)
@@ -21,6 +21,10 @@ function App() {
 
         <Routes>
         <Route exact path="/login" element={<Login setUser={setUser} />}/>
+        </Routes>
+
+        <Routes>
+        <Route exact path="/signup" element={<Signup setUser={setUser} />}/>
         </Routes>
 
        </Router>
