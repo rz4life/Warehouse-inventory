@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllItems } from "../redux/actions/index.js";
-
+import Item from "../components/Item.js";
 
 class Items extends Component {
   componentDidMount() {
@@ -13,7 +13,7 @@ class Items extends Component {
     const items = this.props.items.map((item, i) => {
       console.log(item, i);
       console.log(this);
-      return <h5> {item.name} </h5> 
+      return <Item key={i} item={item} />;
     });
 
     return (
