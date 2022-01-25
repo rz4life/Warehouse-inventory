@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.navbar {
+  background-color: rgb(108, 155, 119);
+  font-size: large;
+  padding: 15px;
+}
+
+.navlinks-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navlink-li {
+  display: inline;
+  margin: 20px;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 16px;
+}
