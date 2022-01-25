@@ -6,8 +6,8 @@ const Navbar = () => {
     <div className="navbar">
       <ul className="navlinks-list">
         <li className="navlink-li">
-          <NavLink className="navlink-item" to="/signin">
-            Sign In{" "}
+          <NavLink className="navlink-item" to="/login">
+            Log In{" "}
           </NavLink>
         </li>
         <li className="navlink-li">
