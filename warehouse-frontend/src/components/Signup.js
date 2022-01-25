@@ -59,7 +59,11 @@ function Signup(props) {
                     </div>
 
                     <div className='input'>
-                        <input placeholder='manager' value={manager} onChange={(e) => (setManager(e.target.value))} />
+                        <label for = "manager"> Are you a manager?</label>
+                        <select name = "manager" onChange={(e)  => (setManager(e.target.value))}>
+                            <option value= "true"> Yes i am a manager</option>
+                            <option value="false"> No i am not a manager</option>
+                        </select>
                     </div>
 
                     <div className='input'>
