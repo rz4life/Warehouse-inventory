@@ -8,20 +8,22 @@ import Item from './components/Item';
 import Login from './components/Login';
 function App() {
   const [user, setUser] = useState(null)
-  const [item, setItems] = useState({})
+  const [item, setItem] = useState({})
   return (
 
     <div className="App">
       <Router>
         <Navbar />
         <Routes>
-        <Route exact path="/items" element={<Items setItems={setItems}/>}/>
-        <Route path="/items/:id" element={<Item item={item}/>}/>
-        </Routes>
-
-        <Routes>
+        <Route exact path="/items" element={<Items setItem={setItem}/>}/>
+        <Route path="/items/:itemId" element={<Item item={item}/>}/>
+        {/* <Route exact path={`/items/${item.id}`} element={<Item item={item}/>}/> */}
         <Route exact path="/login" element={<Login setUser={setUser} />}/>
         </Routes>
+
+        {/* <Routes> */}
+        {/* <Route exact path="/login" element={<Login setUser={setUser} />}/> */}
+        {/* </Routes> */}
 
        </Router>
     </div>

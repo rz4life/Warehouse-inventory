@@ -7,3 +7,14 @@ export const fetchAllItems = () => {
         });
     };
   };
+
+
+  export const fetchItem = (item) => {
+    return (dispatch) => {
+      fetch(`http://localhost:3001/items/${item.id}`)
+        .then((resp) => resp.json())
+        .then((items) => {
+          dispatch({ type: "VIEW_ITEM", item: item });
+        });
+    };
+  };
