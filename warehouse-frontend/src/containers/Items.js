@@ -2,14 +2,11 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllItems } from "../redux/actions/index.js";
 import Item from "../components/Item.js";
-import axios from 'axios';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import ".//Items.css";
+
+
 
 class Items extends Component {
   
@@ -17,19 +14,16 @@ class Items extends Component {
     this.props.fetchAllItems();
   }
 
-  // passDownItem(item, i) {
-    
-  //   <Item key={i} item={item}/>
-  //   console.log(item);
-  //   console.log("clicked")
-  // }
+  
 
   render() {
     
     const items = this.props.items.map((item, i) => {
+
        
         return (
-        <>
+        <div class='items-card'>
+     
           <h1>{item.name}</h1>
           <h1>price:${item.price}</h1>
           
@@ -37,14 +31,18 @@ class Items extends Component {
             <img src={item.image}  />
           </Link> 
          
-        </>
+       </div>
       );
     });
 
     return (
       <>
         <h1>All Items</h1>
+           <div class='items-cardcontainer'>
+
         {items}
+         </div>
+
       </>
     );
   }

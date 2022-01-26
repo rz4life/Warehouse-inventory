@@ -35,6 +35,7 @@ const params = useParams();
         <p>{item.description}</p>
         <h4>In Stock: {item.quantity}</h4> 
       </div>
+      
     );
 
       }

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -16,7 +17,7 @@ code {
 .navbar {
   background-color: rgb(108, 155, 119);
   font-size: large;
-  padding: 15px;
+  padding: 35px;
 }
 
 .navlinks-list {
@@ -30,6 +31,24 @@ code {
   display: inline;
   margin: 20px;
   text-align: center;
-  padding-top: 18px;
-  padding-bottom: 16px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 4px;
+  background: rgb(108, 155, 119);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow:  -5px -2px  rgb(39, 70, 47);
+  transition: 0.5s;
+  
+}
+
+.navlink-li:hover {
+  box-shadow: none;
+}
+
+a:-webkit-any-link {
+  color: rgb(39, 70, 47);
+  cursor: pointer;
+  text-decoration: none;
 }
