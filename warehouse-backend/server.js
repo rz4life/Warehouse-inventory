@@ -69,9 +69,47 @@ app.post('/user/login', async (req,res) =>{
     }
 })
 
+app.post('/item/create', async (req,res) =>{
+
+    try {
+        const newitem = await Item.create(req.body);
+        res.send({message: "New Item added to inventory", item: newitem})
+    } catch (error) {
+        res.json(error)
+    }
+})
 
 
-// app.put('/items/edit', )
+
+app.put('/item/edit/:id',async (req,res) =>{
+
+    try {
+        const item = await Item.findByPk(req.params.id)
+        await item.update(req.body)
+
+        res.send({message: "item has been updated",})
+        
+    } catch (error) {
+        res.json(error)
+    }
+} )
+
+app.delete('/item/delete/:id', async (req,res) =>{
+
+    try {
+        await Item.destroy({
+            where:{
+                id: req.params.id
+            }
+        })
+        res.send({message: "Item deleted"})
+        
+    } catch (error) {
+      res.json(error)  
+    }
+})
+
+
 
 app.listen(port, async() => {
         
