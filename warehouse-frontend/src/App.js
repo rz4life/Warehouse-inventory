@@ -8,7 +8,7 @@ import Signup from "./components/Signup";
 import Login from './components/Login';
 function App() {
   const [user, setUser] = useState(null)
-  const [item, setItem] = useState({})
+  const [item, setItems] = useState({})
   return (
 
     <div className="App">

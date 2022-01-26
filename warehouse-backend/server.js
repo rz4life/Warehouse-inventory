@@ -57,7 +57,7 @@ app.post('/user/login', async (req,res) =>{
         console.log(user)
         if(user.password === req.body.password){
             res.json({message: "Login successful", user: user})
-        }else{
+        }else{ 
             res.status(401)
             res.json({error:"email or password is incorrect"})
         }
@@ -68,6 +68,8 @@ app.post('/user/login', async (req,res) =>{
        res.json({error: "email or password is incorrect"}) 
     }
 })
+
+
 
 // app.put('/items/edit', )
 

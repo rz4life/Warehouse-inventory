@@ -1,9 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllItems } from "../redux/actions/index.js";
-import Item from "../components/Item.js";
-
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ".//Items.css";
 
 
@@ -13,8 +11,6 @@ class Items extends Component {
   componentDidMount() {
     this.props.fetchAllItems();
   }
-
-  
 
   render() {
     
