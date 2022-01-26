@@ -13,10 +13,12 @@ function Login(props) {
                 email: email,
                 password: password
             }).then ((response) =>{
-                console.log(response.User.dataValues)
-                 props.setUser(response.User.dataValues)
+                 props.setUser(response.data.user)
                  
-                // localStorage.setItem('userId', response.data.userId)
+                localStorage.setItem('userId', response.data.user.id)
+
+                const userId = localStorage.getItem('userId')
+                console.log(userId)
             }).catch((error) =>{
                 console.log(error)
             })

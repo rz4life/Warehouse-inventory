@@ -20,10 +20,8 @@ function Signup(props) {
             profilepicture: profilepicture,
             manager: manager
         }).then((response) => {
-            console.log(response.User.dataValues)
-            props.setUser(response.User.dataValues)
-
-            // localStorage.setItem('userId', response.data.userId)
+            props.setUser(response.data.user)
+            localStorage.setItem('userId', response.data.user.id)
         }).catch((error) => {
             console.log(error)
         })

@@ -28,7 +28,7 @@ app.get('/items/:id', async (req, res) => {
     res.json({item})
 })
 
-app.get('/users/:id', async (req, res) => {
+app.get('/user/:id', async (req, res) => {
     const user = await User.findByPk(req.params.id)
     res.json({user})
 })
