@@ -11,12 +11,18 @@ const Navbar = () => {
         <div>
           {
             userId?
-            
+            <>
               <li className="navlink-li">
                 <NavLink className="navlink-item" to="/items">
-                  Item list
+                  Item list {" "}
                 </NavLink>
               </li>
+                  <li className="navlink-li">
+                  <NavLink className="navlink-item" to="/items/new">
+                    Add Item 
+                  </NavLink>
+                </li>
+            </>
          
              : 
              <>

@@ -18,10 +18,12 @@ app.get('/items', async (req, res) => {
     res.json({items})
 })
 
+
 app.get('/users', async (req, res) => {
     const users = await User.findAll();
     res.json({users})
 })
+
 
 app.get('/items/:id', async (req, res) => {
     const item = await Item.findByPk(req.params.id)
@@ -72,7 +74,7 @@ app.post('/user/login', async (req,res) =>{
 app.post('/item/create', async (req,res) =>{
 
     try {
-        const newitem = await Item.create(req.body);
+        const newitem = await Item.create(req.body.item);
         res.send({message: "New Item added to inventory", item: newitem})
     } catch (error) {
         res.json(error)
