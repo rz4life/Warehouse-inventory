@@ -19,13 +19,14 @@ class Items extends Component {
        
         return (
         <div class='items-card'>
-     
+          <div class="name-container">
           <h1>{item.name}</h1>
-          <h1>price:${item.price}</h1>
+          </div>
           
           <Link className="navlink-item" to={`/items/${item.id}`} >
-            <img src={item.image}  />
+            <img src={item.image}  height= "50%" width= "50%"/>
           </Link> 
+          <h1>Price: ${item.price}.00</h1>
          
        </div>
       );
@@ -33,11 +34,14 @@ class Items extends Component {
 
     return (
       <>
+       <div class="backgroundpicI">
+
         <h1>All Items</h1>
            <div class='items-cardcontainer'>
 
         {items}
          </div>
+       </div>
 
       </>
     );
