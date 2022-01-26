@@ -1,7 +1,7 @@
 import axios from "axios";    
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
-
+import ".//Item.css";
 const Item = () => {
 
 const params = useParams();
@@ -28,13 +28,20 @@ const params = useParams();
   return ( 
   
       <div>
+        <div class="backgroundpicII">
+
+        <div class="item-card">
         <h1>{item.name}</h1> 
-        <h2>price: {item.price}</h2> 
-        <img src={item.image}/> 
-        <h3>description:</h3>
+        <img src={item.image} height= "40%" width= "40%"/> 
+        <h2 class="price">Price: ${item.price}.00</h2> 
+        <h4 class="stock">In Stock: {item.quantity}</h4> 
+        <h3>Description:</h3>
+        <div class="content-card">
         <p>{item.description}</p>
-        <h4>In Stock: {item.quantity}</h4> 
+        </div>
+        </div>
       </div>
+        </div>
       
     );
 

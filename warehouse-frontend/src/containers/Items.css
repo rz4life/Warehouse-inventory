@@ -7,13 +7,12 @@
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: rgb(108, 155, 119);
+    background: rgb(255, 255, 255);
     box-shadow:  -14px -14px  rgb(39, 70, 47);
   }
 
 .items-cardcontainer { 
     position: relative;
-
     width: 100%;
     display: flex;
   flex-wrap: no-wrap;
@@ -21,4 +20,28 @@
   margin: 20px;
     
 }
+.name-container{
+  overflow-y: auto;
+  height: 40%;
+}
 
+.backgroundpicI {
+  position: relative; 
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundpicI::before {    
+    content: "";
+    background-image: url('https://www.sccgltd.com/wp-content/uploads/2016/04/warehouse11.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.50;
+}
