@@ -1,15 +1,17 @@
 import axios from "axios";    
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ".//Item.css";
-const Item = () => {
+import DeleteItemButton from "./DeleteItemButton";
+import EditItemForm from "../containers/EditItemForm";
+const Item = (props) => {
 
 const params = useParams();
     
     const [item, setItem] = useState({})
-    
+ 
     console.log("ItemID:", params.id)
-
+   
         const getSingleItem = async() => {
           console.log("useEffect called");
             await axios.get(`http://localhost:3001/items/${params.id}`)
@@ -28,8 +30,8 @@ const params = useParams();
   return ( 
   
       <div>
+        { console.log("PROPS:", props)}
         <div class="backgroundpicII">
-
         <div class="item-card">
         <h1>{item.name}</h1> 
         <img src={item.image} height= "40%" width= "40%"/> 
@@ -38,9 +40,19 @@ const params = useParams();
         <h3>Description:</h3>
         <div class="content-card">
         <p>{item.description}</p>
+        
+         <a href={`${item.id}/edit`}>
+           <button>EDIT ITEM</button>
+         </a> 
+        
+        <br></br>
+        <DeleteItemButton item={item} />
         </div>
         </div>
-      </div>
+       
+      </div> 
+     
+     
         </div>
       
     );

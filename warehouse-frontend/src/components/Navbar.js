@@ -20,6 +20,11 @@ const Navbar = () => {
             Item list
           </NavLink>
         </li>
+        <li className="navlink-li">
+          <NavLink className="navlink-item" to="/items/new">
+            Add Item 
+          </NavLink>
+        </li>
       </ul>
      
     </div>
