@@ -46,7 +46,7 @@ input {
 
   .backgroundpic {
     position: relative; 
-    height: 90vh;
+    height: 30%;
     width: 100%;
     display: flex;
     align-items: center;

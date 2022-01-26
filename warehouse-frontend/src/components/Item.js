@@ -8,11 +8,11 @@ const params = useParams();
     
     const [item, setItem] = useState({})
     
-    console.log("ItemID:", params.itemId)
+    console.log("ItemID:", params.id)
 
         const getSingleItem = async() => {
           console.log("useEffect called");
-            await axios.get(`http://localhost:3001/items/${params.itemId}`)
+            await axios.get(`http://localhost:3001/items/${params.id}`)
             .then(res => {
                 console.log("Res:", res)
                 setItem(res.data.item)
