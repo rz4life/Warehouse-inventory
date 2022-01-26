@@ -1,34 +1,35 @@
-import React, {useState } from "react";
-import './App.css';
-import Items from './containers/Items';
+import React, { useState } from "react";
+import "./App.css";
+import Items from "./containers/Items";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Item from './components/Item';
+import Navbar from "./components/Navbar";
+import Item from "./components/Item";
 import Signup from "./components/Signup";
-import Login from './components/Login';
+import Login from "./components/Login";
+import NewItemForm from "./containers/NewItemForm";
+import EditItemForm from "./containers/EditItemForm";
 function App() {
-  const [user, setUser] = useState(null)
-  const [item, setItems] = useState({})
+  const [user, setUser] = useState(null);
+  const [item, setItems] = useState({});
   return (
-
     <div className="App">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/items" element={<Items setItems={setItems} />} />
+          <Route exact path="/items/new" element={<NewItemForm />} />
+          <Route path="/items/:id" element={<Item item={item} setItems={setItems}/>} />
+         <Route path="/items/:id/edit" element={<EditItemForm item={item} />} />
+        </Routes>
 
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route exact path="/items" element={ <Items setItems={setItems}/>}/>
+        <Routes>
+          <Route exact path="/login" element={<Login setUser={setUser} />} />
+        </Routes>
 
-            <Route path="/items/:id" element={<Item item={item}/>}/>
-          </Routes>
-
-          <Routes>
-              <Route exact path="/login" element={ < Login setUser={setUser} />}/>
-          </Routes>
-
-          <Routes>
-          <Route exact path="/signup" element={ <Signup setUser={setUser} />}/>
-          </Routes>
-       </Router>
+        <Routes>
+          <Route exact path="/signup" element={<Signup setUser={setUser} />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
