@@ -48,7 +48,7 @@ code {
 }
 
 a:-webkit-any-link {
-  color: black;
+  color: rgb(39, 70, 47);
   cursor: pointer;
   text-decoration: none;
 }
