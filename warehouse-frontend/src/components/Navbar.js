@@ -30,12 +30,12 @@ const Navbar = () => {
                <NavLink className="navlink-item" to="/login">
                  Log In{" "}
                </NavLink>
-             </li>
-             <li className="navlink-li">
+               </li>
+               <li className="navlink-li">
                <NavLink className="navlink-item" to="/signup">
                  Sign Up{" "}
                </NavLink>
-             </li>
+               </li>
              </>
           }
         </div>

@@ -53,22 +53,18 @@ function App() {
                   : <Login setUser={setUser} />
 
               }
-            </div>
-          } />
-        </Routes>
+            </div>}/>
 
         <Route exact path="/items/new" element={
           <div>
           {
             user ?<NewItemForm />
-
-              : <Login setUser={setUser} />
-
+            
+            : <Login setUser={setUser} />
+            
           }
-        </div>
-        
-        
-        }/>
+        </div>}/>
+        </Routes>
 
         <Routes>
           <Route exact path="/login" element={
@@ -80,34 +76,30 @@ function App() {
               }
             </div>
           } />
-        </Routes>
 
         <Route path="/items/:id/edit" element={
           <div>
-            {
-              user ?   <EditItemForm item={item} />
-
-                : <Login setUser={setUser} />
-            }
-          </div>
-        
-      
-        
-        }/>
-
-        <Routes>
-          <Route exact path="/signup" element={
-            <div>
-              {
-                user ? <Item item={item} />
-
-                  : <Signup setUser={setUser} />
-
-              }
-            </div>
-          } />
+          {
+            user ?   <EditItemForm item={item} />
+            
+            : <Login setUser={setUser} />
+          }
+        </div>}/>
         </Routes>
-        </Router>
+
+          <Routes>
+            <Route exact path="/signup" element={
+                <div>
+                  {
+                    user ? <Item item={item} />
+
+                      : <Signup setUser={setUser} />
+
+                  }
+                </div>
+              } />
+          </Routes>
+      </Router>
     </div>
   );
 }
