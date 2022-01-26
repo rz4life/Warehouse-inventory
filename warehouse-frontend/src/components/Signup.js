@@ -30,7 +30,7 @@ function Signup(props) {
 
     }
     return (
-        <div className='signuppage'>
+        <div className='backgroundpicS'>
             <div className='signup'>
                 <div class='signup-container'>
 

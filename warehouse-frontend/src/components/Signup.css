@@ -8,6 +8,10 @@ input {
    
   }
 
+  select {
+    border-radius: 50px; 
+  }
+
   button {
     margin-top: 20px;
     background: rgb(108, 155, 119);
@@ -25,13 +29,33 @@ input {
   }
 
   .signup-container {
-    margin-top: 200px;
-    margin-left: 750px;
+    position: relative;
     width: 350px;
     height: 550px;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     background: rgb(108, 155, 119);
-    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    box-shadow:  -14px -14px  rgb(39, 70, 47);
   }
+
+  .backgroundpicS {
+    position: relative; 
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backgroundpicS::before {    
+      content: "";
+      background-image: url('https://res.cloudinary.com/peerspace-inc/image/upload/gtc5kg2nmf8nlvxrisey.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.50;
+}

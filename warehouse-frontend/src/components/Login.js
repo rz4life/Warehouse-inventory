@@ -23,7 +23,7 @@ function Login(props) {
 
     }
     return(
-    <div className = 'loginpage'>
+    <div className = 'backgroundpic'>
         <div className = 'login'>
                 <div class = 'login-container'>
 
