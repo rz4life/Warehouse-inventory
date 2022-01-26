@@ -8,10 +8,11 @@ import Signup from "./components/Signup";
 import Login from './components/Login';
 function App() {
   const [user, setUser] = useState(null)
-  const [item, setItems] = useState({})
+  const [item, setItem] = useState({})
   return (
 
     <div className="App">
+
         <Router>
           <Navbar />
           <Routes>
