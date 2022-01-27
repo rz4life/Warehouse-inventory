@@ -48,7 +48,9 @@ const EditItemForm = (props) => {
   return (
     <div>
       <div class="backgroundpicII">
-        <div class="item-card">
+        <div class="edit">
+
+        <div class="item-card-edit">
           <form onSubmit={submitForm}>
             <h4>Edit Item</h4>
             <input
@@ -57,7 +59,7 @@ const EditItemForm = (props) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               name="name"
-            />{" "}
+              />{" "}
             <br></br>
             <input
               type="text"
@@ -65,7 +67,7 @@ const EditItemForm = (props) => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               name="description"
-            />{" "}
+              />{" "}
             <br></br>
             <input
               type="integer"
@@ -73,7 +75,7 @@ const EditItemForm = (props) => {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               name="price"
-            />
+              />
             <br></br>
             <input
               type="text"
@@ -81,7 +83,7 @@ const EditItemForm = (props) => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
               name="category"
-            />{" "}
+              />{" "}
             <br></br>
             <input
               type="integer"
@@ -89,7 +91,7 @@ const EditItemForm = (props) => {
               value={quantity}
               onChange={(e) => setQuanity(e.target.value)}
               name="quantity"
-            />
+              />
             <br></br>
             <input
               type="text"
@@ -97,11 +99,12 @@ const EditItemForm = (props) => {
               value={image}
               onChange={(e) => setImage(e.target.value)}
               name="image"
-            />{" "}
+              />{" "}
             <br></br>
             <br></br>
-            <input type= "submit" value="submit" />
+            <button type= "submit" value="submit" >Submit</button>
           </form>
+              </div>
         </div>
       </div>
     </div>

@@ -9,6 +9,12 @@ const Navbar = (props) => {
     <div className="navbar">
       <ul className="navlinks-list">
         <div>
+        <li className="navlink-li">
+        <NavLink className="navlink-item" to="/">
+            Home{" "}
+          </NavLink>
+          </li>
+
           {
             userId?
             <>
@@ -24,7 +30,7 @@ const Navbar = (props) => {
                 </li>
     
                   <li className="navlink-li">
-                    <span onClick={() =>{
+                    <span class="logout-button" onClick={() =>{
                       localStorage.removeItem('userId')
                       props.setUser(null)
                     }}> logout</span>
