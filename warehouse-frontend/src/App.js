@@ -10,6 +10,8 @@ import axios from "axios";
 import NewItemForm from "./containers/NewItemForm";
 import EditItemForm from "./containers/EditItemForm";
 import Home from "./components/Home";
+import Logo from "./components/Logo"
+import CopyRight from "./components/CopyRight";
 function App() {
   const [user, setUser] = useState(null)
   const [item, setItems] = useState({})
@@ -36,6 +38,7 @@ function App() {
     <div className="App">
 
       <Router>
+        <Logo />
         <Navbar setUser={setUser}/>
         <Routes>
         <Route exact path="/" element={<Home/>} />
@@ -103,6 +106,7 @@ function App() {
                 </div>
               } />
           </Routes>
+          <CopyRight />
       </Router>
     </div>
   );
