@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   const userId = localStorage.getItem('userId')
 
@@ -21,6 +21,13 @@ const Navbar = () => {
                   <NavLink className="navlink-item" to="/items/new">
                     Add Item 
                   </NavLink>
+                </li>
+    
+                  <li className="navlink-li">
+                    <span onClick={() =>{
+                      localStorage.removeItem('userId')
+                      props.setUser(null)
+                    }}> logout</span>
                 </li>
             </>
          

@@ -35,7 +35,7 @@ function App() {
     <div className="App">
 
       <Router>
-        <Navbar />
+        <Navbar setUser={setUser}/>
         <Routes>
           <Route exact path="/items" element={
             <div>
