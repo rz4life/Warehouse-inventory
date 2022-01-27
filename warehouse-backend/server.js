@@ -60,13 +60,11 @@ app.post('/user/login', async (req,res) =>{
         if(user.password === req.body.password){
             res.json({message: "Login successful", user: user})
         }else{ 
-            res.status(401)
             res.json({error:"email or password is incorrect"})
         }
         
     } catch (error) {
         console.log(error)
-        res.status(400)
        res.json({error: "email or password is incorrect"}) 
     }
 })
