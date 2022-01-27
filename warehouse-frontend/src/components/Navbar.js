@@ -30,7 +30,7 @@ const Navbar = (props) => {
                 </li>
     
                   <li className="navlink-li">
-                    <span onClick={() =>{
+                    <span class="logout-button" onClick={() =>{
                       localStorage.removeItem('userId')
                       props.setUser(null)
                     }}> logout</span>
