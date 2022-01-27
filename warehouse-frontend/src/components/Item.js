@@ -11,13 +11,10 @@ const Item = (props) => {
   const [item, setItem] = useState({})
   const [user, setUser] = useState({})
 
-  console.log("ItemID:", params.id)
-
   const getSingleItem = async () => {
     console.log("useEffect called");
     await axios.get(`http://localhost:3001/items/${params.id}`)
       .then(res => {
-        console.log("Res:", res)
         setItem(res.data.item)
       })
       .catch(err => {
@@ -29,7 +26,6 @@ const Item = (props) => {
   const getUserInfo = async () => {
 
     const userId = localStorage.getItem('userId')
-    console.log(userId)
     try {
       if (userId) {
         const mainuser = await axios.get(`http://localhost:3001/user/${userId}`)
@@ -37,7 +33,6 @@ const Item = (props) => {
           setUser(mainuser.data.user)
         }
       }
-      console.log(user)
     } catch (error) {
       console.log(error)
     }
@@ -47,7 +42,6 @@ const Item = (props) => {
   return (
 
     <div>
-      {console.log("PROPS:", props)}
       <div class="backgroundpicII">
         <div class="item">
 

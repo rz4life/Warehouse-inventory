@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 const EditItemForm = (props) => {
   const params = useParams();
-  console.log(props);
+  
   const [item, setItem] = useState({});
   const getSingleItem = async () => {
-    console.log("useEffect called")
+  
     await axios
       .get(`http://localhost:3001/items/${params.id}`)
       .then((res) => {
-        console.log("Res:", res);
         setItem(res.data.item);
       })
       .catch((err) => {
@@ -20,7 +19,6 @@ const EditItemForm = (props) => {
   useEffect(() => {
     getSingleItem();
   }, []);
-  console.log(item);
   const [name, setName] = useState(item.name);
   const [description, setDescription] = useState(item.description);
   const [price, setPrice] = useState(item.price);
