@@ -4,8 +4,6 @@ import { deleteItem } from "../redux/actions/index.js";
 
 const DeleteItemButton = (props) => {
   const clickHandler = (e) => {
-    console.log(props);
-
     if (e.target.matches("button")) {
       console.log(e.target.innerText);
 
