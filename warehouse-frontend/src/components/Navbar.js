@@ -9,6 +9,12 @@ const Navbar = (props) => {
     <div className="navbar">
       <ul className="navlinks-list">
         <div>
+        <li className="navlink-li">
+        <NavLink className="navlink-item" to="/">
+            Home{" "}
+          </NavLink>
+          </li>
+
           {
             userId?
             <>
