@@ -9,6 +9,7 @@ const Item = (props) => {
 const params = useParams();
     
     const [item, setItem] = useState({})
+    const [user, setUser] = useState({})
  
     console.log("ItemID:", params.id)
    
@@ -25,7 +26,23 @@ const params = useParams();
         }
         useEffect(() => {getSingleItem()},[]) 
 
+        const getUserInfo = async () => {
 
+          const userId = localStorage.getItem('userId')
+          console.log(userId)
+          try {
+            if (userId) {
+              const mainuser = await axios.get(`http://localhost:3001/user/${userId}`)
+              if (mainuser) {
+                setUser(mainuser.data.user)
+              }
+            }
+            console.log(user)
+          } catch (error) {
+            console.log(error)
+          }
+        }
+        useEffect(() => { getUserInfo() }, [])
 
   return ( 
   
@@ -40,13 +57,19 @@ const params = useParams();
         <h3>Description:</h3>
         <div class="content-card">
         <p>{item.description}</p>
-        
-         <a href={`${item.id}/edit`}>
-           <button>EDIT ITEM</button>
-         </a> 
-        
-        <br></br>
-        <DeleteItemButton item={item} />
+        {
+          user.manager?
+          <>
+              <a href={`${item.id}/edit`}>
+              <button>EDIT ITEM</button>
+            </a> 
+          
+          <br></br>
+          <DeleteItemButton item={item} />
+          
+          </>: null
+        }
+         
         </div>
         </div>
        
