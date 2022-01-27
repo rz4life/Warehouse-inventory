@@ -109,3 +109,7 @@ a:-webkit-any-link {
   background: rgb(255, 255, 255);
   box-shadow:  -14px -14px  rgb(39, 70, 47);
 }
+
+.footer{
+  color: white;
+}

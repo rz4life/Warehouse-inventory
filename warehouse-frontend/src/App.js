@@ -10,6 +10,8 @@ import axios from "axios";
 import NewItemForm from "./containers/NewItemForm";
 import EditItemForm from "./containers/EditItemForm";
 import Home from "./components/Home";
+import Logo from "./components/logo";
+import CopyRight from "./components/copyright";
 function App() {
   const [user, setUser] = useState(null)
   const [item, setItems] = useState({})
@@ -36,6 +38,7 @@ function App() {
     <div className="App">
 
       <Router>
+        <Logo />
         <Navbar setUser={setUser}/>
         <Routes>
         <Route exact path="/" element={<Home/>} />
@@ -71,12 +74,12 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route exact path="/login" element={
+          <Route  path="/login" element={
             <div>
               {
-                user ? <Item item={item} />
+                user ? <Items setItems={setItems} />
 
-                  : <Login setUser={setUser} />
+                  : <Login setUser={setUser}  />
               }
             </div>
           } />
@@ -95,7 +98,7 @@ function App() {
             <Route exact path="/signup" element={
                 <div>
                   {
-                    user ? <Item item={item} />
+                    user ? <Items setItems={setItems}  />
 
                       : <Signup setUser={setUser} />
 
@@ -103,6 +106,7 @@ function App() {
                 </div>
               } />
           </Routes>
+          <CopyRight />
       </Router>
     </div>
   );
