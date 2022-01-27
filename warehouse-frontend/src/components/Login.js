@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import ".//Login.css";
 function Login(props) {
@@ -15,16 +15,14 @@ function Login(props) {
             }).then ((response) =>{
                  props.setUser(response.data.user)
                  
-                localStorage.setItem('userId', response.data.user.id)
-
-                const userId = localStorage.getItem('userId')
-                console.log(userId)
-            }).catch((error) =>{
-                console.log(error)
-            })
-
+                 localStorage.setItem('userId', response.data.user.id)
+                }).catch((error) =>{
+                    console.log(error)
+                })
+                
     }
-    return(
+    // useEffect(() => { }, [props.setUser()])
+            return(
     <div className = 'backgroundpic'>
         <div className = 'login'>
                 <div class = 'login-container'>

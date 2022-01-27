@@ -111,6 +111,20 @@ app.delete('/item/delete/:id', async (req,res) =>{
     }
 })
 
+app.post('/item/category', async (req,res) =>{
+    try {
+
+        const items = await Item.findAll({where:{
+            category: req.body.category
+        }})
+
+        res.send({items})
+        
+    } catch (error) {
+        res.json(error)  
+    }
+})
+
 
 
 app.listen(port, async() => {
