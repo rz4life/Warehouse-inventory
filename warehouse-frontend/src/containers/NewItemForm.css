@@ -1,0 +1,20 @@
+.backgroundpicIII {
+    position: relative; 
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backgroundpicIII::before {    
+      content: "";
+      background-image: url('https://www.sccgltd.com/wp-content/uploads/2016/04/warehouse11.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.50;
+  }
