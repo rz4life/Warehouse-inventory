@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  color: #27462f;
 }
 
 code {
@@ -15,16 +16,17 @@ code {
 
 
 .navbar {
-  background-color: rgb(108, 155, 119);
+  background-color: #27462f;
   font-size: large;
-  padding: 35px;
+  padding: 25px;
+  color: #8dc0b2;
 }
 
 .navlinks-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: right;
 }
 
 .navlink-li {
@@ -35,10 +37,10 @@ code {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 4px;
-  background: rgb(108, 155, 119);
+  background: #27462f;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow:  -5px -2px  rgb(39, 70, 47);
+  box-shadow:  -5px -2px  #8dc0b2;
   transition: 0.5s;
   
 }
@@ -48,13 +50,11 @@ code {
 }
 
 a:-webkit-any-link {
-  color: rgb(39, 70, 47);
+  color: #8dc0b2;
   cursor: pointer;
   text-decoration: none;
 }
-.logout-button{
-  color: rgb(39, 70, 47);
-}
+
 
 
 .edit{
@@ -112,4 +112,31 @@ a:-webkit-any-link {
 
 .footer{
   color: white;
+}
+
+h1.whitetxt{
+  color:#8dc0b2;
+}
+
+img.logo{
+
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; ;  }
+
+  img.logo:hover {
+
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; ;  }
+
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }

@@ -38,7 +38,6 @@ function App() {
     <div className="App">
 
       <Router>
-        <Logo />
         <Navbar setUser={setUser}/>
         <Routes>
         <Route exact path="/" element={<Home/>} />

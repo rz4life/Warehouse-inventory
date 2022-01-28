@@ -48,7 +48,7 @@ const Item = (props) => {
           <div class="item-card">
             <h1>{item.name}</h1>
             <img src={item.image} height="40%" width="40%" />
-            <h2 class="price">Price: ${item.price}.00</h2>
+            <h2 class="price">Price: ${item.price}</h2>
             <h4 class="stock">In Stock: {item.quantity}</h4>
             <h3>Description:</h3>
             <div class="content-card">

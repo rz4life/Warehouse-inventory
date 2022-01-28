@@ -16,6 +16,7 @@ const Home = () => {
               <br></br>
               <br></br> Please signup or sign in to begin
             </p>
+            <img className="main-logo" src="2.png" alt="Wind Warehouse Logo." />
           </div>
         </div>
       </div>
