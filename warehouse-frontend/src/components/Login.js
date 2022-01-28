@@ -6,7 +6,9 @@ function Login(props) {
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
     
-   
+    function refreshPage() {
+        window.location.reload(false);
+    }
 
     const submitform = (e) =>{
         e.preventDefault()
@@ -16,9 +18,11 @@ function Login(props) {
             }).then ((response) =>{
                 setError(response.data.error)
                  props.setUser(response.data.user)
-                 
+                 if(response.data.user){
+                     refreshPage()
+                 }
                  localStorage.setItem('userId', response.data.user.id)
-                }).catch((error) =>{
+            }).catch((error) =>{
                     console.log(error)
                 })             
     }
