@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import { addNewItem } from "../redux/actions/index.js";
+import { useNavigate } from 'react-router-dom';
 
 
 class NewItemForm extends Component {
@@ -17,13 +18,20 @@ class NewItemForm extends Component {
     };
   }
 
+  
+   
   submitHandler = (e) => {
     e.preventDefault();
+   
     this.props.addNewItem(this.state);
+  
+   
 
   };
   onChangeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
+    console.log(this.props)
+    
   };
 
 

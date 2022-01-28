@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 const EditItemForm = (props) => {
   const params = useParams();
-  
+  const navigate = useNavigate();
   const [item, setItem] = useState({});
   const getSingleItem = async () => {
   
@@ -38,10 +39,12 @@ const EditItemForm = (props) => {
       })
       .then((response) => {
         props.setUser(response.User.dataValues);
+        
       })
       .catch((error) => {
         console.log(error);
       });
+      navigate("/items")
   };
   return (
     <div>
@@ -100,7 +103,7 @@ const EditItemForm = (props) => {
               />{" "}
             <br></br>
             <br></br>
-            <button type= "submit" value="submit" >Submit</button>
+         <button type= "submit" value="submit" >Submit</button>
           </form>
               </div>
         </div>
