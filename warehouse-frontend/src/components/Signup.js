@@ -9,7 +9,9 @@ function Signup(props) {
     const [profilepicture, setProfilepicture] = useState("");
     const [manager, setManager] = useState(false)
 
-
+    function refreshPage() {
+        window.location.reload(false);
+    }
     const submitform = (e) => {
         e.preventDefault()
         axios.post(`http://localhost:3001/signup`, {
@@ -22,6 +24,7 @@ function Signup(props) {
         }).then((response) => {
             props.setUser(response.data.user)
             localStorage.setItem('userId', response.data.user.id)
+            refreshPage()
         }).catch((error) => {
             console.log(error)
         })

@@ -10,8 +10,8 @@ import axios from "axios";
 import NewItemForm from "./containers/NewItemForm";
 import EditItemForm from "./containers/EditItemForm";
 import Home from "./components/Home";
-import Logo from "./components/logo";
 import CopyRight from "./components/copyright";
+import Profile from "./components/profile"
 function App() {
   const [user, setUser] = useState(null)
   const [item, setItems] = useState({})
@@ -65,6 +65,17 @@ function App() {
           <div>
           {
             user ?<NewItemForm />
+            
+            : <Login setUser={setUser} />
+            
+          }
+        </div>}/>
+      
+
+        <Route exact path="/user/profile" element={
+          <div>
+          {
+            user ? <Profile  user = {user}/>
             
             : <Login setUser={setUser} />
             
