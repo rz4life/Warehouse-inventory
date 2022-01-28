@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { connect } from "react-redux";
 import { addNewItem } from "../redux/actions/index.js";
+import {Navigate } from "react-router-dom";
 
 
 class NewItemForm extends Component {
@@ -20,7 +21,7 @@ class NewItemForm extends Component {
   submitHandler = (e) => {
     e.preventDefault();
     this.props.addNewItem(this.state);
-
+    <Navigate replace to="/items" />
   };
   onChangeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -36,7 +37,7 @@ class NewItemForm extends Component {
             <div class="item-card-new">
 
               <div className="centered">
-                <form onSubmit={this.submitHandler}>
+                <form onSubmit={this.submitHandler } to="/items">
                   <h4>ADD ITEM</h4>
                   <input
                     type="text"
