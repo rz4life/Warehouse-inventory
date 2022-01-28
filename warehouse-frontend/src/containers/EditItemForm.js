@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const EditItemForm = (props) => {
   const params = useParams();
-  
+  const navigate = useNavigate();
   const [item, setItem] = useState({});
   const getSingleItem = async () => {
   
@@ -27,8 +28,7 @@ const EditItemForm = (props) => {
   const [image, setImage] = useState(item.image);
   const submitForm = (e) => {
     e.preventDefault();
-    axios
-      .put(`http://localhost:3001/item/edit/${params.id}`, {
+    axios.put(`http://localhost:3001/item/edit/${params.id}`, {
         name: name,
         description: description,
         price: price,
@@ -37,11 +37,12 @@ const EditItemForm = (props) => {
         image: image,
       })
       .then((response) => {
-        props.setUser(response.User.dataValues);
+       console.log(response)
       })
       .catch((error) => {
         console.log(error);
       });
+      navigate("/items")
   };
   return (
     <div>

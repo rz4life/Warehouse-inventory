@@ -25,11 +25,16 @@ const Navbar = (props) => {
                   Item list {" "}
                 </NavLink>
               </li>
-                  <li className="navlink-li">
+              {/* {
+                props.user.manager?   */}
+                <li className="navlink-li">
                   <NavLink className="navlink-item" to="/items/new">
                     Add Item 
                   </NavLink>
-                </li>
+                </li> 
+              {/* //   : null
+
+              // } */}
     
                   <li className="navlink-li">
                     <span class="logout-button" onClick={() =>{

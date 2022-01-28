@@ -1,13 +1,15 @@
 import { connect } from "react-redux";
-
 import { deleteItem } from "../redux/actions/index.js";
+import { useNavigate } from "react-router-dom";
 
 const DeleteItemButton = (props) => {
+  const navigate = useNavigate();
   const clickHandler = (e) => {
     if (e.target.matches("button")) {
       console.log(e.target.innerText);
 
       props.deleteItem(props.item);
+      navigate("/items")
     }
   };
 

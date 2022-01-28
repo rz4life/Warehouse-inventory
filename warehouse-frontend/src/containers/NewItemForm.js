@@ -1,103 +1,98 @@
-import { Component } from "react";
-import { connect } from "react-redux";
-import { addNewItem } from "../redux/actions/index.js";
-import {Navigate } from "react-router-dom";
+import axios from "axios";
+import { useState} from "react";
+import { useNavigate } from "react-router-dom";
+const NewItemForm = () => {
+
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+  const [category, setCategory] = useState("");
+  const [quantity, setQuanity] = useState("");
+  const [image, setImage] = useState("");
 
 
-class NewItemForm extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      name: "",
-      description: "",
-      price: "",
-      category: "",
-      quantity: "",
-      image: "",
-    };
-  }
-
-  submitHandler = (e) => {
+  const submitForm = (e) => {
     e.preventDefault();
-    this.props.addNewItem(this.state);
-    <Navigate replace to="/items" />
+    axios.post(`http://localhost:3001/item/create`, {
+    item: {name: name,
+        description: description,
+        price: price,
+        category: category,
+        quantity: quantity,
+        image: image
+      }})
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      navigate("/items")
   };
-  onChangeHandler = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  return (
+    <div>
+      <div class="backgroundpicnew">
+        <div class="edit">
 
-
-
-  render() {
-    return (
-      <>
-        <div class="new">
-          <div class="backgroundpicnew">
-            <div class="item-card-new">
-
-              <div className="centered">
-                <form onSubmit={this.submitHandler } to="/items">
-                  <h4>ADD ITEM</h4>
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    value={this.state.name}
-                    onChange={this.onChangeHandler}
-                    name="name"
-                  />{" "}
-                  <br></br>
-                  <input
-                    type="text"
-                    placeholder="Description"
-                    value={this.state.description}
-                    onChange={this.onChangeHandler}
-                    name="description"
-                  />{" "}
-                  <br></br>
-                  <input
-                    type="integer"
-                    placeholder="Price"
-                    value={this.state.price}
-                    onChange={this.onChangeHandler}
-                    name="price"
-                  />
-                  <br></br>
-                  <input
-                    type="text"
-                    placeholder="Category"
-                    value={this.state.category}
-                    onChange={this.onChangeHandler}
-                    name="category"
-                  />{" "}
-                  <br></br>
-                  <input
-                    type="integer"
-                    placeholder="Stock"
-                    value={this.state.quantity}
-                    onChange={this.onChangeHandler}
-                    name="quantity"
-                  />
-                  <br></br>
-                  <input
-                    type="text"
-                    placeholder="Image"
-                    value={this.state.image}
-                    onChange={this.onChangeHandler}
-                    name="image"
-                  />{" "}
-                  <br></br>
-                  <br></br>
-                  <button type="submit" value="submit" >Submit</button>
-                </form>
-
-                <br></br>
+        <div class="item-card-edit">
+          <form onSubmit={submitForm}>
+            <h4>Edit Item</h4>
+            <input
+              type="text"
+              placeholder={"Name"}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              name="name"
+              />{" "}
+            <br></br>
+            <input
+              type="text"
+              placeholder={"Description"}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              name="description"
+              />{" "}
+            <br></br>
+            <input
+              type="integer"
+              placeholder={"Price"}
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              name="price"
+              />
+            <br></br>
+            <input
+              type="text"
+              placeholder={"Category"}
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              name="category"
+              />{" "}
+            <br></br>
+            <input
+              type="integer"
+              placeholder={"Quantity"}
+              value={quantity}
+              onChange={(e) => setQuanity(e.target.value)}
+              name="quantity"
+              />
+            <br></br>
+            <input
+              type="text"
+              placeholder={"Image"}
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+              name="image"
+              />{" "}
+            <br></br>
+            <br></br>
+            <button type= "submit" value="submit" >Submit</button>
+          </form>
               </div>
-            </div>
-          </div>
         </div>
-      </>
-    );
-  }
-}
-export default connect(null, { addNewItem })(NewItemForm);
+      </div>
+    </div>
+  );
+};
+export default NewItemForm;
