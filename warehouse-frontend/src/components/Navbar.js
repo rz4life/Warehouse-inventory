@@ -7,11 +7,13 @@ const Navbar = (props) => {
 
   return (
     <div className="navbar">
+        <img className="logo" src="windLogo.png" alt="Wind Warehouse Logo." />
       <ul className="navlinks-list">
         <div>
         <li className="navlink-li">
         <NavLink className="navlink-item" to="/">
-            Home{" "}
+        Home{" "}
+           
           </NavLink>
           </li>
 
