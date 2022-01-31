@@ -37,7 +37,7 @@ const NewItemForm = () => {
 
         <div class="item-card-edit">
           <form onSubmit={submitForm}>
-            <h4>Edit Item</h4>
+            <h4>Add Item</h4>
             <input
               type="text"
               placeholder={"Name"}

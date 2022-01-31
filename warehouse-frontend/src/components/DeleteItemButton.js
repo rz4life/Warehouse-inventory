@@ -6,10 +6,8 @@ const DeleteItemButton = (props) => {
   const navigate = useNavigate();
   const clickHandler = (e) => {
     if (e.target.matches("button")) {
-      console.log(e.target.innerText);
-
       props.deleteItem(props.item);
-      navigate("/items")
+      navigate("/items");
     }
   };
 
