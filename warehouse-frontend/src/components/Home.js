@@ -1,5 +1,5 @@
 import ".//Home.css";
-const Home = () => {
+const Home = (props) => {
   return (
     <div>
       <div class="backgroundpicIV">
@@ -14,8 +14,13 @@ const Home = () => {
               <br></br>
               An interactive react application created by Shafee, RZ and Andrés
               <br></br>
-              <br></br> Please signup or sign in to begin
+              <br></br>
             </p>
+            {
+              props.user ? 
+              <p>Welcome {props.user.data.user.firstName.toUpperCase()}</p>
+              :<p> Please signup or sign in to begin</p>
+            }
             <img className="main-logo" src="2.png" alt="Wind Warehouse Logo." />
           </div>
         </div>
