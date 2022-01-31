@@ -1,4 +1,4 @@
-.backgroundpicV {
+.backgroundpicV{
     position: relative; 
     height: 100%;
     width: 100%;
@@ -6,8 +6,7 @@
     align-items: center;
     justify-content: center;
   }
-  
-  .backgroundpicV::before {    
+  .backgroundpicV::before{    
       content: "";
       background-image: url('https://divisare-res.cloudinary.com/images/c_limit,f_auto,h_2000,q_auto,w_3000/v1466761385/vpmyoi8i0gntaifm7vdy/kokaistudios-dirk-weiblen-xintai-warehouse.jpg');
       background-size: cover;
@@ -18,14 +17,11 @@
       left: 0px;
       opacity: 0.50;
   }
-
-  .profile-card {
+  .profile-card{
     position: relative;
     margin-top:0% ;
     width: 20%;
     height: 50%;
-   
-
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
@@ -36,18 +32,7 @@
   .profile{
     height: 750px;
   }
-
-  .profile-grey {
+  .profile-grey{
       color:rgb(39, 70, 47);
   }
-
   
-
-  .avatar-color{
-    height: 15%;
-    width: 35%;
-    border: 2px solid rgb(39, 70, 47);
-    
-    bottom:40%;
-   
-  }

@@ -8,27 +8,22 @@ body {
   background-color: black;
   color: #27462f;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
 .navbar {
   background-color: #27462f;
   font-size: large;
   padding: 25px;
   color: #8dc0b2;
 }
-
 .navlinks-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: right;
 }
-
 .navlink-li {
   display: inline;
   margin: 20px;
@@ -42,25 +37,18 @@ code {
   cursor: pointer;
   box-shadow:  -5px -2px  #8dc0b2;
   transition: 0.5s;
-  
 }
-
 .navlink-li:hover {
   box-shadow: none;
 }
-
 a:-webkit-any-link {
   color: #8dc0b2;
   cursor: pointer;
   text-decoration: none;
 }
-
-
-
 .edit{
   height: 1000px;
 }
-
 .item-card-edit {
   position: relative;
   margin-top: 50%;
@@ -73,11 +61,9 @@ a:-webkit-any-link {
   background: rgb(255, 255, 255);
   box-shadow:  -14px -14px  rgb(39, 70, 47);
 }
-
 .new{
   height: 1000px;
 }
-
 .backgroundpicnew {
   position: relative; 
   height: 100%;
@@ -86,7 +72,6 @@ a:-webkit-any-link {
   align-items: center;
   justify-content: center;
 }
-
 .backgroundpicnew::before {    
     content: "";
     background-image: url('https://1.bp.blogspot.com/-uToWusf7RKw/XdzxmjzCpMI/AAAAAAAAdUE/3Dwhi2xcUhMKin-4mwDTC9Gly9kVbYSwgCLcBGAsYHQ/s1600/pexels-photo-236705.jpeg');
@@ -98,7 +83,6 @@ a:-webkit-any-link {
     left: 0px;
     opacity: 0.50;
 }
-
 .item-card-new {
   position: relative;
   width: 25%;
@@ -109,24 +93,19 @@ a:-webkit-any-link {
   background: rgb(255, 255, 255);
   box-shadow:  -14px -14px  rgb(39, 70, 47);
 }
-
 .footer{
   color: white;
 }
-
 h1.whitetxt{
   color:#8dc0b2;
 }
-
 img.logo{
-
   animation-name: spin;
   animation-duration: 3000ms;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; ;  }
-
-  img.logo:hover {
-
+  animation-timing-function: linear; ;  
+}
+img.logo:hover {
     animation-name: spin;
     animation-duration: 2000ms;
     animation-iteration-count: infinite;

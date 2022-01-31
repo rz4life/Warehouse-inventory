@@ -5,9 +5,7 @@ input {
     height: 25px;
     font-size: 14px;
     border-radius: 50px;
-   
   }
-
   button {
     margin-top: 20px;
     background: rgb(108, 155, 119);
@@ -18,13 +16,10 @@ input {
     font-weight: 900;
     box-shadow:  -5px -2px  rgb(39, 70, 47);
     transition: 0.5s;
-    
   }
-
   button:hover {
     box-shadow: none;
   }
-
   .login-container {
     position: relative;
     margin-top: 200px;
@@ -37,14 +32,10 @@ input {
     box-shadow:  -14px -14px  rgb(39, 70, 47);
     opacity: 1;
   }
-
-  
-
   .login {
-      height: 1000px;
+    height: 1000px;
   }
-
-  .backgroundpic {
+ .backgroundpic {
     position: relative; 
     height: 30%;
     width: 100%;
@@ -52,7 +43,6 @@ input {
     align-items: center;
     justify-content: center;
 }
-
 .backgroundpic::before {    
       content: "";
       background-image: url('https://www.perfocal.com/blog/content/images/2020/03/Perfocal_4-1-2019_VW0FI5_1_standard.jpg');

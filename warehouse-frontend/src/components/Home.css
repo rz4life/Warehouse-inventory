@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
   }
-  
   .backgroundpicIV::before {    
       content: "";
       background-image: url('https://divisare-res.cloudinary.com/images/c_limit,f_auto,h_2000,q_auto,w_3000/v1466761385/vpmyoi8i0gntaifm7vdy/kokaistudios-dirk-weiblen-xintai-warehouse.jpg');
@@ -18,7 +17,6 @@
       left: 0px;
       opacity: 0.50;
   }
-
   .home-card {
     position: relative;
     margin-top: 50%;
@@ -31,7 +29,6 @@
     box-shadow:  -14px -14px #8dc0b2 ;
     color: #8dc0b2;
   }
-
   .home{
     height: 1000px;
   }
