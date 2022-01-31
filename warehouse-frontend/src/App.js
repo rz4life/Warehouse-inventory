@@ -40,7 +40,8 @@ function App() {
       <Router>
         <Navbar user={user} setUser={setUser} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Home user = {user}/>} />
+
         </Routes>
         <Routes>
           <Route
